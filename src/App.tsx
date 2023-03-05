@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useAppDispatch } from "./app/hooks";
-import { removePinch, togglePinch } from "./app/reducers/gameSlice";
+import { removePinch } from "./app/reducers/gameSlice";
 import { Game } from "./components/Game";
 import "./style.css";
 
