@@ -1,0 +1,7 @@
+.field {
+  border: 5px inset #f4f4f4;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+}

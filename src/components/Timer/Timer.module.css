@@ -1,0 +1,14 @@
+.timer {
+  display: flex;
+  width: 86px;
+  padding: 2px;
+  justify-content: space-between;
+  background: black;
+}
+.timer li {
+  height: 50px;
+  width: 26px;
+  background-position: "center";
+  background-size: cover;
+  background-repeat: no-repeat;
+}
