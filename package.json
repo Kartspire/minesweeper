@@ -6,7 +6,7 @@
   "homepage": "https://Kartspire.github.io/minesweeper",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build --base=./",
+    "build": "tsc && vite build",
     "preview": "vite preview",
     "component": "generate-react component",
     "deploy": "gh-pages -d dist"

@@ -14,6 +14,10 @@
 
   <br>
 
+## Ссылка на Gh-pages
+
+https://kartspire.github.io/minesweeper/
+
 ## Установка
 
 ```bash
