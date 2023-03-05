@@ -34,7 +34,7 @@ export const Timer: FC<TimerProps> = () => {
     <ul className={styles.timer}>
       <li
         style={{
-          backgroundImage: `url(../../src/assets/numbersSvg/${getNumbersIcon(
+          backgroundImage: `url(assets/numbersSvg/${getNumbersIcon(
             time,
             3
           )}.svg)`,
@@ -42,7 +42,7 @@ export const Timer: FC<TimerProps> = () => {
       ></li>
       <li
         style={{
-          backgroundImage: `url(../../src/assets/numbersSvg/${getNumbersIcon(
+          backgroundImage: `url(assets/numbersSvg/${getNumbersIcon(
             time,
             2
           )}.svg)`,
@@ -50,7 +50,7 @@ export const Timer: FC<TimerProps> = () => {
       ></li>
       <li
         style={{
-          backgroundImage: `url(../../src/assets/numbersSvg/${getNumbersIcon(
+          backgroundImage: `url(assets/numbersSvg/${getNumbersIcon(
             time,
             1
           )}.svg)`,

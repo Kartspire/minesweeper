@@ -82,7 +82,7 @@ export const Cell: FC<CellProps> = ({ id, x, y }) => {
         dispatch(togglePressCell(cell));
       }}
       style={{
-        backgroundImage: `url(../../src/assets/svg/${getCellIcon()}.svg)`,
+        backgroundImage: `url(assets/svg/${getCellIcon()}.svg)`,
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",

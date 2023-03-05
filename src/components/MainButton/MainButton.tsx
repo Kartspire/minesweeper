@@ -29,7 +29,7 @@ export const MainButton: FC<MainButtonProps> = () => {
       onClick={restartGame}
       className={styles.mainButton}
       style={{
-        backgroundImage: `url(../../src/assets/svg/${getButtonIcon()}.svg)`,
+        backgroundImage: `url(assets/svg/${getButtonIcon()}.svg)`,
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",

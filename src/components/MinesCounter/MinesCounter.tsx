@@ -15,7 +15,7 @@ export const MinesCounter: FC<MinesCounterProps> = () => {
     <ul className={styles.minesCounter}>
       <li
         style={{
-          backgroundImage: `url(../../src/assets/numbersSvg/${getNumbersIcon(
+          backgroundImage: `url(assets/numbersSvg/${getNumbersIcon(
             minesFlagged,
             3
           )}.svg)`,
@@ -23,7 +23,7 @@ export const MinesCounter: FC<MinesCounterProps> = () => {
       ></li>
       <li
         style={{
-          backgroundImage: `url(../../src/assets/numbersSvg/${getNumbersIcon(
+          backgroundImage: `url(assets/numbersSvg/${getNumbersIcon(
             minesFlagged,
             2
           )}.svg)`,
@@ -31,7 +31,7 @@ export const MinesCounter: FC<MinesCounterProps> = () => {
       ></li>
       <li
         style={{
-          backgroundImage: `url(../../src/assets/numbersSvg/${getNumbersIcon(
+          backgroundImage: `url(assets/numbersSvg/${getNumbersIcon(
             minesFlagged,
             1
           )}.svg)`,
