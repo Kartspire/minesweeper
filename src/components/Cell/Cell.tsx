@@ -20,7 +20,6 @@ interface CellProps {
 
 export const Cell: FC<CellProps> = ({ id, x, y }) => {
   const pos = y * SIZE + x;
-  console.log("renderCell");
   const dispatch = useAppDispatch();
   const cell = useAppSelector((state) => state.game.field[pos]);
   const started = useAppSelector((state) => state.game.started);

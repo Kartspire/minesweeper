@@ -8,9 +8,7 @@ interface FieldProps {}
 const dimension = new Array(SIZE).fill(0);
 
 export const Field: FC<FieldProps> = () => {
-  console.log("render field");
   const won = useAppSelector((state) => state.game.won);
-  console.log(won);
 
   return (
     <div className={styles.field}>

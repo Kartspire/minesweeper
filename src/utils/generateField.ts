@@ -56,7 +56,6 @@ export function initField(clickedCellPos: number) {
     i += 1;
     getNeighbours(cell, initialField).forEach((cell) => incNeighbours(cell));
   }
-  console.log(initialField);
   return initialField;
 }
 
