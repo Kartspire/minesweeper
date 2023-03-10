@@ -4,9 +4,7 @@ import { useAppSelector } from "../../app/hooks";
 import { restart } from "../../app/reducers/gameSlice";
 import styles from "./MainButton.module.css";
 
-interface MainButtonProps {}
-
-export const MainButton: FC<MainButtonProps> = () => {
+export const MainButton: FC = () => {
   const dispatch = useDispatch();
   const isPinch = useAppSelector((state) => state.game.isPinch);
   const won = useAppSelector((state) => state.game.won);

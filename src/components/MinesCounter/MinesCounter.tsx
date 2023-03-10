@@ -3,9 +3,7 @@ import { useAppSelector } from "../../app/hooks";
 import { getNumbersIcon, MINES } from "../../utils/generateField";
 import styles from "./MinesCounter.module.css";
 
-interface MinesCounterProps {}
-
-export const MinesCounter: FC<MinesCounterProps> = () => {
+export const MinesCounter: FC = () => {
   const minesFlagged = useAppSelector(
     (state) =>
       MINES - state.game.field.filter((cell) => cell.flagIndex === 1).length

@@ -5,9 +5,7 @@ import { MinesCounter } from "../MinesCounter";
 import { Timer } from "../Timer";
 import styles from "./Game.module.css";
 
-interface GameProps {}
-
-export const Game: FC<GameProps> = () => {
+export const Game: FC = () => {
   return (
     <div className={styles.game}>
       <div className={styles.topPanel}>

@@ -12,13 +12,13 @@ import {
 import { initField, SIZE } from "../../utils/generateField";
 import styles from "./Cell.module.css";
 
-interface CellProps {
+interface ICellProps {
   id: number;
   x: number;
   y: number;
 }
 
-export const Cell: FC<CellProps> = ({ id, x, y }) => {
+export const Cell: FC<ICellProps> = ({ id, x, y }) => {
   const pos = y * SIZE + x;
   const dispatch = useAppDispatch();
   const cell = useAppSelector((state) => state.game.field[pos]);

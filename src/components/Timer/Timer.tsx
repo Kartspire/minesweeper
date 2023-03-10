@@ -3,9 +3,7 @@ import { useAppSelector } from "../../app/hooks";
 import { getNumbersIcon } from "../../utils/generateField";
 import styles from "./Timer.module.css";
 
-interface TimerProps {}
-
-export const Timer: FC<TimerProps> = () => {
+export const Timer: FC = () => {
   const started = useAppSelector((state) => state.game.started);
   const won = useAppSelector((state) => state.game.won);
   const lost = useAppSelector((state) => state.game.lost);
