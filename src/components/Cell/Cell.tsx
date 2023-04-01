@@ -1,5 +1,5 @@
-import { FC, MouseEvent } from "react";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { FC, MouseEvent } from 'react';
+import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import {
   flagCell,
   openCell,
@@ -8,9 +8,9 @@ import {
   togglePinch,
   start,
   togglePressCell,
-} from "../../app/reducers/gameSlice";
-import { initField, SIZE } from "../../utils/generateField";
-import styles from "./Cell.module.css";
+} from '../../app/reducers/gameSlice';
+import { initField, SIZE } from '../../utils/generateField';
+import styles from './Cell.module.css';
 
 interface ICellProps {
   id: number;
@@ -51,23 +51,32 @@ export const Cell: FC<ICellProps> = ({ id, x, y }) => {
   }
 
   function getCellIcon() {
-    if (!cell.isOpen && cell.isPressed) return "empty";
-    if (cell.falsyMine) return "falsyMine";
+    if (cell.falsyMine) return 'falsyMine';
+    if (
+      (!cell.isOpen && cell.isPressed) ||
+      (cell.isOpen && cell.value === 0 && !cell.isMine)
+    )
+      return 'empty';
+    if (!cell.isOpen && cell.flagIndex === 0) return 'closed';
+    if (!cell.isOpen && cell.flagIndex === 1) return 'flag';
+    if (!cell.isOpen && cell.flagIndex === 2) return 'question';
+    if (cell.isOpen && cell.isMine && cell.detonated) return 'detonatedMine';
+    if (cell.isOpen && cell.isMine && !cell.detonated) return 'mine';
+    if (cell.isOpen && !cell.isMine && cell.value !== 0) return cell.value;
 
-    if (cell.isOpen)
-      return cell.isMine
-        ? cell.detonated
-          ? "detonatedMine"
-          : "mine"
-        : cell.value === 0
-        ? "empty"
-        : cell.value;
-    if (!cell.isOpen)
-      return cell.flagIndex
-        ? cell.flagIndex === 1
-          ? "flag"
-          : "question"
-        : "closed";
+    // if (cell.isOpen)
+    //   return cell.isMine
+    //     ? cell.detonated
+    //       ? 'detonatedMine'
+    //       : 'mine'
+    //     : cell.value === 0
+    //     ? 'empty'
+    //     : cell.value;
+    // return cell.flagIndex
+    //   ? cell.flagIndex === 1
+    //     ? 'flag'
+    //     : 'question'
+    //   : 'closed';
   }
   return (
     <button
@@ -83,9 +92,9 @@ export const Cell: FC<ICellProps> = ({ id, x, y }) => {
       }}
       style={{
         backgroundImage: `url(assets/svg/${getCellIcon()}.svg)`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
       }}
     ></button>
   );

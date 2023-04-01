@@ -1,5 +1,5 @@
-import { fieldState } from "../app/reducers/gameSlice";
-import { ICell } from "../models/ICell";
+import { fieldState } from '../app/reducers/gameSlice';
+import { ICell } from '../models/ICell';
 
 export const SIZE = 16;
 export const MINES = 40;
@@ -60,7 +60,7 @@ export function initField(clickedCellPos: number) {
 }
 
 export function checkNull(state: fieldState, pos: number) {
-  state.field[pos].isOpen = true;
+  if (state.field[pos].flagIndex === 0) state.field[pos].isOpen = true;
   if (state.field[pos].isMine) {
     state.lost = true;
     state.field[pos].detonated = true;
@@ -83,10 +83,10 @@ export function checkNull(state: fieldState, pos: number) {
 }
 
 export function getNumbersIcon(value: number, exponent: number) {
-  const number = value.toString().split("")[
-    value.toString().split("").length - exponent
+  const number = value.toString().split('')[
+    value.toString().split('').length - exponent
   ];
-  return number === undefined ? "0" : number;
+  return number === undefined ? '0' : number;
 }
 
 export function addNeighboursPressed(state: fieldState, pos: number) {
